@@ -21,7 +21,7 @@ def directors_totals(nds)
   #pp directors_database
   
   count_for_director = 0
-  while count_for_director < directors_database.length do
+  while count_for_director < nds.length do
     total_gross = 0
     count_for_movies = 0
     while count_for_movies < directors_database[count_for_director][:movies].length do
