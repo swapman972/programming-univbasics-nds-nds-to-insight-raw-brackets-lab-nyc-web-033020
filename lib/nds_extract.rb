@@ -20,16 +20,16 @@ def directors_totals(nds)
   # Be sure to return the result at the end!
   #pp directors_database
   
-  count = 0
-  while count < directors_database.length do
+  count_for_director = 0
+  while count_for_director < directors_database.length do
     total_gross = 0
-    count1 = 0
-    while count1 < directors_database[count][:movies].length do
-      total_gross += (directors_database[count][:movies][count1][:worldwide_gross])
-      count1 += 1
+    count_for_movies = 0
+    while count_for_movies < directors_database[count_for_director][:movies].length do
+      total_gross += (directors_database[count_for_director][:movies][count_for_movies][:worldwide_gross])
+      count_for_movies += 1
     end
-    result[directors_database[count][:name]] = total_gross
-    count += 1
+    result[directors_database[count_for_director][:name]] = total_gross
+    count_for_director += 1
   end
   result
 end
